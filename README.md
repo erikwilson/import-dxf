@@ -25,6 +25,10 @@ Polygon output and layer selection has been added, as a merger between import-dx
 * Select format Encapsulated PostScript (eps) or Plain SVG
 
 #### Prepare to Save as DXF
+Steps should be performed in this exact order. If there are errors when
+importing in EAGLE, such as issues with overlapping polygons, 
+wire segments, or incomplete images, restore from the previous 
+save file with unmodified paths and try again.
 * Select all with the node path editor (*F2*, *Ctrl-A*)
 * Extensions > Modify Path > Add Nodes
 * Extensions > Modify Path > Flatten Beziers
@@ -46,3 +50,10 @@ Polygon output and layer selection has been added, as a merger between import-dx
 * Modify options if needed and click 'OK'
 * Any errors with scaling and offset are automatically detected and solution is offered
 * Verify the script looks correct and click 'Run'
+
+## Other
+Please help this project by filing an issue or pull request if there are any errata 
+or improvements to be made in the documentation or associated ulp.
+
+See the [CactusCon 2014 badge](https://github.com/erikwilson/cactuscon2014/tree/master/imgs)
+for examples of DXF files generated from Inkscape for use with import-dxf.
