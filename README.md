@@ -15,33 +15,40 @@ Polygon output and layer selection has been added, as a merger between import-dx
 
 #### Other Image Preparations
 * Type out any text that you want, Format it and such
+* With the object select tool (*F1*)
+* Edit > Select All in All Layers (*Ctrl-Alt-A*)
 * Lock the height/width ratio
-* Change height to 100 (this helps with changing the ratio)
+* Change height or width to 100 units (in mm or inches, this helps with changing the ratio)
 * Path > Object to Path (*Shift-Ctrl-C*)
+* Object > Ungroup (*Shift-Ctrl-G*) until all objects are ungrouped
+* Path > Stroke to Path (*Ctrl-Alt-C*)
 
 #### Save Current Progress
 * Before modifying paths for DXF create a restore point
 * File > Save As (*Shift-Ctrl-S*)
-* Select format Encapsulated PostScript (eps) or Plain SVG
+* Select format Plain SVG
 
 #### Prepare to Save as DXF
 Steps should be performed in this exact order. If there are errors when
-importing in EAGLE, such as issues with overlapping polygons, 
-wire segments, or incomplete images, restore from the previous 
-save file with unmodified paths and try again.
+importing in EAGLE, such as issues with invalid or overlapping polygons, 
+wire segments, or incomplete images, open the previously saved file
+with unmodified paths and try again. Opening a new file and retrying the
+process may be more successful than undoing changes from history.
 * Select all with the node path editor (*F2*, *Ctrl-A*)
 * Extensions > Modify Path > Add Nodes
 * Extensions > Modify Path > Flatten Beziers
 * For closed loop letters and shapes O,o,D,d,etc...
-  * Draw a dividing shape through the closed shape ( O => ([)] )
+  * Draw a dividing shape (such as a rectangle) through the closed shape ( O => ([)] )
   * Select both shapes
   * Path > Division (*Ctrl-/*)
   * Repeat with all closed paths
 * Select all with the node path editor (*F2*, *Ctrl-A*)
 * Path > Break Apart (*Shift-Ctrl-K*)
-  * Uncut holes will fill in as black, visually verify that all holes are properly cut
+  * Uncut holes will fill in as black
+  * Visually verify that all holes are properly cut
 * File > Save As (*Shift-Ctrl-S*)
-* Select format Autocard DXF R14
+  * Select format Autocard DXF R14
+  * Make sure LWPOLYLINE output is enabled for polygon support
 
 #### EAGLE
 * Open your .BRD file
